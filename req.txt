@@ -1,0 +1,5 @@
+brainflow
+numpy
+matplotlib
+pythonosc.osc_server
+pythonosc.dispatcher
