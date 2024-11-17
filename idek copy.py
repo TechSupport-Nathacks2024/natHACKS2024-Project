@@ -5,6 +5,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import time
 from brainflow.data_filter import WindowOperations
+from datetime import datetime
 
 
 params = BrainFlowInputParams()
@@ -35,7 +36,7 @@ eeg_channels = board.get_eeg_channels(board_id)
 sampling_rate = BoardShim.get_sampling_rate(board_id)
 time.sleep(2)
 
-for i in range(200):
+for i in range(125):
     time.sleep(0.5)
     current_data = board.get_current_board_data(128)
     current_eeg_data = current_data[eeg_channels] 
@@ -58,6 +59,13 @@ for i in range(200):
 
             theta_total += theta_power
             beta_total += beta_power
+    if i < 50:
+        beta.append(beta_total)
+        theta.append(theta_total)
+    if i == 50:
+        beta_threshold = (sum(beta)/50)
+        theta_threshold = (sum(theta)/50)
+    
     
 
     print(i)
@@ -73,15 +81,15 @@ board.release_session()
 
 print(beta)
 print("Concentrate:", beta[0:49], (sum(beta[0:49])/50))
-print("Yap:", beta[50:99], (sum(beta[50:99])/50))
-print("Look away:", beta[100:149], (sum(beta[100:149])/50))
-print("Zoning:", beta[150:199], (sum(beta[150:199])/50))
+print("Yap:", beta[50:74], (sum(beta[50:74])/25))
+print("Look away:", beta[75:99], (sum(beta[75:99])/25))
+print("Zoning:", beta[100:124], (sum(beta[100:124])/25))
 
 print(theta)
 print("Awake:", theta[0:49], (sum(theta[0:49])/50))
-print("closed:", theta[50:99], (sum(theta[50:99])/50))
-print("head tilt:", theta[100:149], (sum(theta[100:149])/50))
-print("Awake:", theta[150:199], (sum(theta[150:199])/50))
+print("closed:", theta[50:74], (sum(theta[50:74])/25))
+print("head tilt:", theta[75:99], (sum(theta[75:99])/25))
+print("Awake:", theta[100:124], (sum(theta[100:124])/25))
 
 
 eeg_channels = board.get_eeg_channels(board_id)
