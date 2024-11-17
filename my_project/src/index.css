@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+/* app.css */
+/* @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap'); */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  transition: background-color 0.5s ease, color 0.5s ease; /* Smooth transition */
+}
+
+
+/* Light Mode */
+.light-mode {
+  background:  #EEEEEE; /* Radial gradient from white to light gray, and linear gradient from neutral-200 to purple-300 */
+  border-radius: 5px ;
+  color: #333333; /* Dark text */
+  transition: background-color 0.5s ease, color 0.5s ease; /* Smooth transition */
+}
+
+/* Dark Mode  */
+.dark-mode {
+  background:  #201E43; /* Radial gradient with black and #3B1C32, and linear gradient from fuchsia to zinc */
+  color: #ffffff; /* Light text */
+  transition: background-color 0.5s ease, color 0.5s ease; /* Smooth transition */
+}
+
+/* QuickSand font */
+.quickSand {
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+  color: #333;
+  transition: background-color 0.5s ease, color 0.5s ease; /* Smooth transition */
+}
+
+
+.bullet {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700; /* Bold font */
+  font-size: 36px; /* Increased font size, adjust as needed */
+  text-align: center;
+}
+
+

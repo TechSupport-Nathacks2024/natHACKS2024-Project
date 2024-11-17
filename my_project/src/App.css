@@ -1,0 +1,138 @@
+/* app.css */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+.quickSand {
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+  transition: background-color 0.5s ease, color 0.5s ease; /* Smooth transition */
+  color: #333;
+}
+
+/* Centering container for Weather1 */
+.centered-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+}
+
+/* Add these styles to App.css */
+.grid-container {
+  display: grid;
+  width: 200px;
+  grid-template-columns: repeat(2, 1fr);  /* 2 buttons per row */
+  gap: 50px;  /* Space between buttons */
+  margin-top: 40px;
+  padding: 10px;
+}
+
+.Weather-container{
+  position: relative;
+  right: -300px;
+  bottom: -170px;
+}
+
+.SOS{
+  border-color: white;
+  border-radius: 10px;
+  position: relative;
+  top: 200px;
+  right: -190px;
+}
+.button-container{
+  position: relative;
+  right: -100px;
+  top: -150px;
+  border: grey;
+  border-width: 5px;
+  gap: 30px;
+}
+
+/* .big-button {
+  width: 100%;
+  height: 200px;
+  font-size: 24px;
+  text-align: center;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+} */
+
+.big-button:hover {
+  opacity: 0.8;
+}
+
+/* Popup styles */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  width: 80%;
+  height: 80%;
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: red;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+/* Button hover effect */
+.button1 {
+  background-color: #134B70;
+  gap: 10px;
+  color: white;
+  top: 10px;
+  width:400px;
+  height: 120px;
+  align-items: center;
+  font-size: 1.75rem;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.button1:hover {
+  background-color: #283a62; /* Darker shade for hover effect */
+  opacity: 0.85;
+}
+
+.toggle-icon:hover {
+  cursor: pointer;
+  opacity: 0.85;
+}
+
+/* ConnectButton component buttons */
+.text-white:hover {
+  background-color: #283a62; /* Match the hover color */
+  opacity: 0.85;
+}
+
+.historic-para{
+  color: black;
+}
+.camera1{
+  color: black; 
+}

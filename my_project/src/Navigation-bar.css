@@ -1,0 +1,117 @@
+.navbar {
+    width: 100%;                 /* Full width */
+    height: 100px;               /* Height of the navbar */
+    position: fixed;             /* Fixed position to keep it at the top */
+    top: 0;                      /* Align to the top of the viewport */
+    left: 0;                     /* Align to the left of the viewport */
+    z-index: 1000;               /* Ensure it stays above other elements */
+    display: flex;               /* Flex display for layout */
+    align-items: center;         /* Center items vertically */
+    justify-content: space-between; /* Space out items horizontally */
+    background-color: #508C9B;   /* Background color */
+    padding: 10px;            /* Padding for internal spacing */
+    transition: all 0.3s ease;   /* Smooth transition for any changes */
+}
+
+.logo {
+    max-width: 60px;
+    cursor: pointer;
+}
+
+.bullet {
+    flex: 1;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.bullet li {
+    font-size: 1.2rem; /* Reduced font size */
+    cursor: pointer;
+    color: black;
+    margin: 0 5px; /* Reduced margin for closer spacing */
+}
+
+.bullet li:nth-child(5) {
+    position: static;
+    font-weight: 900;
+    font-size: 2rem; /* Adjusted size */
+    color: #000000;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.bullet.dark li:nth-child(5) {
+    color: rgb(255, 255, 255);
+}
+
+.bullet.dark li {
+    color: white;
+}
+
+.toggle-icon {
+    width: 40px;
+    cursor: pointer;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background: #000000;
+    padding: 5px 5px 5px 15px;
+    border-radius: 50px;
+    width: 200px; /* Reduced width */
+    margin-right: 20px; /* Reduced margin */
+}
+
+.search-bar.dark {
+    background: white;
+}
+
+.search-bar input {
+    padding: 4px; /* Reduced padding */
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    color: #ffffff;
+    font-size: 1rem;
+    max-width: 120px; /* Reduced max width */
+} 
+
+.search-bar.dark input {
+    color: #000000;
+}
+
+.search-bar input::placeholder {
+    color: #ffffff;
+}
+
+.search-bar.dark input::placeholder {
+    color: black;
+}
+
+.search-bar img {
+    width: 20px;
+    cursor: pointer;
+}
+
+/* Hide navbar contents and adjust layout for smaller screens */
+@media (max-width: 768px) {
+    .bullet {
+        display: none; /* Hide the navbar items */
+    }
+
+    .search-bar {
+        display: none; /* Hide the search bar */
+    }
+
+    .toggle-icon {
+        width: 30px; /* Adjust size of the toggle icon */
+    }
+
+    .navbar {
+        padding: 10px; /* Reduce navbar padding */
+    }
+}
